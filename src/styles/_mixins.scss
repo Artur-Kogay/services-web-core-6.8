@@ -1,0 +1,74 @@
+@mixin hide-links($count, $className){
+    @for $i from 1 through $count{
+        .#{$className}:nth-child(#{$i}){
+            display: none;
+        }
+    }
+}
+
+@mixin flex($justify: null, $align: null, $gap: null, $direction: null){
+    display: flex;
+    @each $prop, $value in (
+        justify-content: $justify,
+        align-items: $align,
+        gap: $gap,
+        flex-direction: $direction
+    ) {
+        @if $value != null {
+            #{$prop}: $value;
+        }
+    }
+}
+
+@mixin sizes($height: null, $width: null){
+    @if $height != null{
+        height: $height;
+    }
+    @if $width != null{
+        width: $width;
+    }
+}
+
+@mixin font-property($size: null, $weight: null, $color: null, $line-h: null, $letter-s: null){
+    @if $size != null {
+        font-size: $size;
+    }
+    
+    @if $weight != null {
+        font-weight: $weight;
+    }
+
+    @if $color != null {
+        color: $color;
+    }
+    @if $line-h != null {
+        line-height: $line-h;
+    }
+    @if $letter-s != null {
+        letter-spacing: $letter-s;
+    }
+}
+
+@mixin position-properties($args) {
+    @each $prop, $value in $args {
+        @if $value != null {
+            #{$prop}: $value;
+        }
+    }
+}
+
+@mixin overflow-scroll() {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex-wrap: nowrap !important;
+}
+
+@mixin text-clamp($num) {
+    line-clamp: unset;
+    display: -webkit-box;
+    -webkit-line-clamp: #{$num};
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: clip;
+}

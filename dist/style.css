@@ -1,0 +1,303 @@
+:root {
+  --graphite-black: #1B1C21;
+  --gray: #7E7E82;
+  --mint: #41F6D7;
+  --ghostly-white: #f8f8f8;
+  --pink: #FF3E79;
+  --platinum: #EAEAEA;
+  --bright-mint: #B8FFEC;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "TTLakes", sans-serif;
+  background-color: var(--ghostly-white);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 25px 0 24px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--gray);
+}
+
+input {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+@font-face {
+  font-family: "TTLakes";
+  src: url("../assets/fonts/TT Lakes Neue Trial Light.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "TTLakes";
+  src: url("../assets/fonts/TT Lakes Neue Trial Medium.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "TTLakes";
+  src: url("../assets/fonts/TT Lakes Neue Trial Bold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "TTLakes";
+  src: url("../assets/fonts/TT Lakes Neue Trial ExtraBold.ttf");
+  font-weight: 900;
+}
+.site-header {
+  background-color: white;
+  padding: 24px 0;
+  display: none;
+}
+.site-header .page-tools {
+  display: flex;
+  justify-content: space-between;
+}
+.site-header .page-tools .divider {
+  background-color: var(--platinum);
+  height: 32px;
+  width: 2px;
+  border-radius: 1px;
+}
+.site-header .page-tools__side {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.site-header .page-tools__side .tools-link {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--pink);
+  cursor: pointer;
+}
+.site-header .page-tools__side .burger-menu div {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 3px;
+  flex-direction: column;
+}
+.site-header .page-tools__side .burger-menu div span {
+  border-radius: 1px;
+  background-color: white;
+  height: 2px;
+}
+.site-header .page-tools__side .burger-menu div span:first-child {
+  width: 18px;
+}
+.site-header .page-tools__side .burger-menu div span:nth-child(2) {
+  width: 10px;
+}
+.site-header .page-tools__side .burger-menu div span:last-child {
+  width: 14px;
+}
+
+.services {
+  margin-top: 24px;
+}
+.services__tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.services__tools .title {
+  position: relative;
+  padding-left: 32px;
+  font-size: 28px;
+  font-weight: 700;
+  width: 50%;
+}
+.services__tools .services__links {
+  display: flex;
+  gap: 32px;
+  padding: 0 32px 0 0;
+}
+.services__tools .services__links a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.services__tools .tools-link {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--pink);
+  cursor: pointer;
+}
+.services .title {
+  position: relative;
+  padding-left: 16px;
+  font-size: 28px;
+  font-weight: 700;
+}
+.services .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: var(--mint);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.services .content nav {
+  margin-top: 24px;
+}
+.services .content nav .content__navigation::-webkit-scrollbar {
+  display: none;
+}
+.services .content nav .content__navigation {
+  display: flex;
+  flex-wrap: wrap;
+}
+.services .content nav .content__navigation li {
+  padding: 8px 9.3px 8px 16.54px;
+  text-align: center;
+  white-space: nowrap;
+}
+.services .content nav .content__navigation .active-link {
+  border: 2px solid var(--bright-mint);
+  border-radius: 6px;
+}
+.services .content__wrapper {
+  display: flex;
+  gap: 28px;
+}
+.services .content__wrapper div {
+  width: 100%;
+}
+.services .content__text {
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--graphite-black);
+  line-height: 18px;
+  letter-spacing: 0.2;
+}
+.services .content__btn {
+  margin: 16px 0;
+}
+.services .content__btn img {
+  padding-right: 8px;
+}
+.services .content__illustration {
+  width: 100%;
+}
+.services .content__illustration img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .site-header {
+    display: block !important;
+  }
+  .page-tools__side:first-child .divider {
+    display: none;
+  }
+  .page-tools__side:last-child .tools-link:nth-child(1) {
+    display: none;
+  }
+  .page-tools__side:last-child .tools-link:nth-child(2) {
+    display: none;
+  }
+  .page-tools__side:last-child .tools-link:nth-child(3) {
+    display: none;
+  }
+  .services__tools {
+    background-color: var(--gray--ghostly-white);
+  }
+  .services__links {
+    display: none !important;
+  }
+  .content__wrapper {
+    flex-direction: column !important;
+    gap: 0;
+  }
+  .content__wrapper div {
+    width: 100% !important;
+  }
+  .content__wrapper .content__text:last-of-type {
+    display: none !important;
+  }
+  .content__navigation {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex-wrap: nowrap !important;
+  }
+}
+@media (max-width: 768px) {
+  .site-header {
+    display: block !important;
+  }
+  .services__tools {
+    background-color: var(--gray--ghostly-white);
+  }
+  .services__links {
+    display: none !important;
+  }
+  .content__wrapper div {
+    width: 100% !important;
+  }
+  .content__wrapper .content__text:last-of-type {
+    line-clamp: unset;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: clip;
+  }
+  .content__navigation {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex-wrap: nowrap !important;
+  }
+}
+@media (max-width: 1024px) {
+  .content__navigation {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex-wrap: nowrap !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
